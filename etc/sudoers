@@ -1,0 +1,2 @@
+# Added mitnick to the /etc/sudoers file:
+mitnick ALL=NOPASSWD:ALL

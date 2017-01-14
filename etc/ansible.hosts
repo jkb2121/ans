@@ -1,0 +1,6 @@
+# /etc/ansible/hosts file:
+
+[servers]
+solr.kr47.net
+
+
