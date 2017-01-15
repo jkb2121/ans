@@ -24,9 +24,17 @@ do it.
 
 Next Steps:
 
-* Do an nginx tutorial to see how ansible works
+* ~~Do an nginx tutorial to see how ansible works~~
+* ~~Maybe customize nginx a little?~~
 * Do a few tweaks and updates on stuff that I like on
 my linux servers just to explore some of the options
-* Maybe customize nginx a little?
+* What's the difference between a role and a play?
 * Install SOLR and Java from Ansible-galaxy.
 * Profit.
+
+
+----
+
+Useful links:
+
+* Ansible nginx tutorial here: https://serversforhackers.com/an-ansible-tutorial
