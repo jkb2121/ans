@@ -5,7 +5,7 @@
    - docroot: /var/www/solr.kr47.net/public
   tasks:
    - name: Install Nginx
-     apt: pkg=nginx state=installed update_cache=true
+     apt: pkg=nginx.yml state=installed update_cache=true
      register: nginxinstalled
      notify:
       - Start Nginx
@@ -17,9 +17,9 @@
 
   handlers:
    - name: Start Nginx
-     service: name=nginx state=started
+     service: name=nginx.yml state=started
    - name: Reload Nginx
-     service: name=nginx state=reloaded
+     service: name=nginx.yml state=reloaded
 
 
 

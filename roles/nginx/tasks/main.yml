@@ -1,0 +1,49 @@
+---
+
+- name: Install Nginx
+  apt: pkg=nginx state=installed update_cache=true
+  register: nginxinstalled
+  notify:
+    - Start Nginx
+
+- name: Disable Default Site
+  when: nginxinstalled|success
+  file: dest=/etc/nginx/sites-enabled/default state=absent
+
+- name: Add Solr.kr47.net Site Config
+  when: nginxinstalled|success
+  register: sfhconfig
+  template: src=solrkr47net.conf dest="/etc/nginx/sites-available/{{ domain }}.conf" owner=root group=root
+
+- name: Enable Solr.kr47.net Site Config
+  when: sfhconfig|success
+  file: src="/etc/nginx/sites-available/{{ domain }}.conf" dest="/etc/nginx/sites-enabled/{{ domain }}.conf" state=link
+
+
+- name: Create Web root
+  when: nginxinstalled|success
+  file: dest="/var/www/{{ domain }}/public" mode=775 state=directory owner=www-data group=www-data
+  notify:
+    - Reload Nginx
+
+- name: Web Root Permissions
+  when: nginxinstalled|success
+  file: dest="/var/www/{{ domain }}" mode=775 state=directory owner=www-data group=www-data recurse=yes
+  register: webrootcreated
+  notify:
+    - Reload Nginx
+
+- name: Add Solr.kr47.net Index.html
+  when: webrootcreated|success
+  copy: src=index.html dest="/var/www/{{ domain }}/public/index.html" owner=www-data group=www-data
+
+- name: Add Solr.kr47.net Random Files
+  when: webrootcreated|success
+  copy: src=random_files dest="/var/www/{{ domain }}/public" owner=www-data group=www-data
+
+- name: Random Files Permissions
+  when: webrootcreated|success
+  file: dest="/var/www/{{ domain }}/public/random_files" mode=775 state=directory owner=www-data group=www-data recurse=yes
+  register: webrootcreated
+  notify:
+    - Reload Nginx
