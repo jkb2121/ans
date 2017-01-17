@@ -31,6 +31,8 @@ my linux servers just to explore some of the options
 * What's the difference between a role and a play?
 * Install SOLR and Java from Ansible-galaxy.
 * Profit.
+* NTP and Pacific Time Zone
+* Organize the directories per the Ansible best practices
 
 
 ----
@@ -38,3 +40,5 @@ my linux servers just to explore some of the options
 Useful links:
 
 * Ansible nginx tutorial here: https://serversforhackers.com/an-ansible-tutorial
+* Ansible Best Practices: http://docs.ansible.com/ansible/playbooks_best_practices.html
+
