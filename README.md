@@ -13,7 +13,9 @@ Meanwhile, a few notes about where I started:
 * My Ansible user is "mitnick"
 * I've remoted in to my host as root, added mitnick username/password
 changed shell to /bin/bash, created ~/.ssh, and then copied my ssh key to his authorized_keys
-* I've added his name to the /etc/sudoers
+* I've added mitnick to the /etc/sudoers
+  * mitnick	ALL=NOPASSWD: ALL  # for general ansible goodness
+  * mitnick	ALL=(solr) NOPASSWD: ALL  # for executing the geerlingguy.solr
 
 So with those changes above (I'll list any more that I find)
 I should be able to use ansible and ansible-playbooks

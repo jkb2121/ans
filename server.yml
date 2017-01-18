@@ -3,4 +3,8 @@
   roles:
     - nginx
     - homedir
+    - system
+    - geerlingguy.java
+    - geerlingguy.solr
+
 
