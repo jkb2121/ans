@@ -16,6 +16,7 @@ changed shell to /bin/bash, created ~/.ssh, and then copied my ssh key to his au
 * I've added mitnick to the /etc/sudoers
   * mitnick	ALL=NOPASSWD: ALL  # for general ansible goodness
   * mitnick	ALL=(solr) NOPASSWD: ALL  # for executing the geerlingguy.solr
+* Replaced Debian's default ansible 1.7 to ansible 2.2 using pip install.
 
 So with those changes above (I'll list any more that I find)
 I should be able to use ansible and ansible-playbooks
