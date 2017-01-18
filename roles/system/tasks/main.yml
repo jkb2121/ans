@@ -1,0 +1,6 @@
+---
+# Added the repository where we can find the openjdk-8-jdk stuff.
+# http://docs.ansible.com/ansible/apt_repository_module.html
+- apt_repository:
+    repo: deb http://ftp.de.debian.org/debian jessie-backports main
+    state: present
