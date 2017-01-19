@@ -1,0 +1,17 @@
+<add>
+    <doc>
+        <field name="id">1</field>
+        <field name="name">Haggis</field>
+        <field name="breed">Oregon Forest Cat</field>
+    </doc>
+    <doc>
+        <field name="id">2</field>
+        <field name="name">Pico de Gato</field>
+        <field name="breed">American Bobtail Cat</field>
+    </doc>
+    <doc>
+        <field name="id">3</field>
+        <field name="name">Coconut</field>
+        <field name="breed">Domestic Shorthair</field>
+    </doc>
+</add>

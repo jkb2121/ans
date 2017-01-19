@@ -1,0 +1,3 @@
+---
+- name: Add SOLR Data Files to Turkey Index
+  copy: src="turkey/" dest="/var/solr/data/turkey/data/jkb" owner=solr group=solr

@@ -14,6 +14,8 @@ http://solr.kr47.net:8983/solr/#/~cores/turkey
 TODO: Ask Keegan where to put the todo information about how you customize the ansible-galaxy configurations.
 TODO: Ask Keegan how ansible-galaxy updates get plugged back in
 
+* webinar: https://programs.lucidworks.com/Webinar-Solr-example-files.html?utm_source=hp <https://programs.lucidworks.com/Webinar-Solr-example-files.html?utm_source=hp> and blog post series that will have the final in that series published soon too: https://lucidworks.com/blog/2015/12/08/browse-new-improved-solr-5/ <https://lucidworks.com/blog/2015/12/08/browse-new-improved-solr-5/>
+
 
 ## Customizations to external roles:
 
