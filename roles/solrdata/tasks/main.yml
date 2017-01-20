@@ -1,3 +1,9 @@
 ---
 - name: Add SOLR Data Files to Turkey Index
   copy: src="turkey/" dest="/var/solr/data/turkey/data/jkb" owner=solr group=solr
+
+- name: Replace Turkey Core solrconfig.xml with our solrconfig.xml
+  copy: src="config/solrconfig.xml" dest="/var/solr/data/turkey/conf/solrconfig.xml" owner=solr group=solr
+
+- name: Replace Turkey Core schema.xml with our schema.xml
+  copy: src="config/schema.xml" dest="/var/solr/data/turkey/conf/schema.xml" owner=solr group=solr
