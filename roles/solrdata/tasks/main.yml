@@ -7,3 +7,8 @@
 
 - name: Replace Turkey Core schema.xml with our schema.xml
   copy: src="config/schema.xml" dest="/var/solr/data/turkey/conf/schema.xml" owner=solr group=solr
+
+- name: Delete the managed-schema file from Turkey Core
+  file:
+    path: /var/solr/data/turkey/conf/managed-schema
+    state: absent
