@@ -1,0 +1,108 @@
+# Test of loading some product-looking data to load into my Productcore
+
+{
+"commit": {},
+"add": {
+"doc": {
+"id": 100019,
+"title": "ThreeBond Grip Glue",
+"image_url": "/images/items/160/TBD/TBD0001/X001-Y001.jpg",
+"description": "<p>Enough glue to do about 3 pairs of grips. 3-Bond Grip Glue is a high-strength adhesive specially formulated to keep grips in place without damaging the rubber.</p><ul>
+<li>Specially formulated to keep grips in place without damaging the rubber.</li>
+<li>Ideal for snowmobile, motorcycle, ATV and personal watercraft.</li><li>1 ounce.</li>
+<li>Sold each.</li>
+</ul>",
+"mmyexists": "N",
+"style": "TBD0001",
+"min_retail_price": 10.99,
+"max_retail_price": 10.99,
+"min_selling_price": 10.99,
+"max_selling_price": 10.99,
+"language": "en"
+}
+},
+"add": {
+"doc": {
+"id": 100046,
+"title": "AC Racing Blackline Front Bumper",
+"image_url": "/images/items/160/ACG/ACG0002/X001.jpg",
+"description": "<p>AC Racing&#39;s Blackline Bumper series can be purchased with a ball-burnished aluminum or powder-coated black finish. The frame of the Blackline bumpers is larger for more coverage on the front of your quad when compared to AC Racing&#39;s standard bumpers. The most unique and custom aspect of the Blackline series is the bumper screen options. You can use the standard factory-installed screen or you can have your quad stand out by choosing from a line of custom bumper screens (sold separately).</p>
+<ul>
+<li>All parts in the Blackline series are available in black powder-coated and aluminum finishes.</li>
+<li>The Blackline series uses a larger frame and a replaceable / customizable screen.</li>
+</ul>
+<p>Another built-in feature is the lower mount and the way it wraps around the bottom of your frame for more protection. When used with one of the AC Racing Engine Skid Plates you can integrate the two together to make the two into one piece from front of your Blackline Bumper to the rear of the frame. (<b>Note: </b> You will need to trim off the front of the skid to do this modification).</p>",
+"mmyexists": "Y",
+"style": "ACG0002",
+"min_retail_price": 128.99,
+"max_retail_price": 141.99,
+"min_selling_price": 116.99,
+"max_selling_price": 127.99,
+"language": "en"
+}
+},
+"add": {
+"doc": {
+"id": 100048,
+"title": "AC Racing Cooler Rack",
+"image_url": "/images/items/160/ACG/ACG0005/X001.jpg",
+"description": "<p>AC Racing used their years in the ATV industry to develop a cooler rack with a great degree of usefulness, durability and style. The AC Racing Cooler Rack features the same features and usefulness of the AC Racing Grab Bar with the benefit of added storage space.</p>
+<ul>
+<li>Designed for durable use, the cooler rack is constructed to handle the demands of ATV riding.</li>
+<li>With superior engineering, the rack works as a grab bar, too, making it easier to load / unload your ATV.</li>
+<li>The cooler rack retains flag mounting ability for maximum versatility.</li>
+<li>With a brushed finished and using 1&#34; aluminum tubing, the cooler rack is designed to look great and deliver performance and durability.</li>
+<li>Includes strap and hardware.</li>
+</ul>",
+"mmyexists": "Y",
+"style": "ACG0005",
+"min_retail_price": 115.99,
+"max_retail_price": 142.99,
+"min_selling_price": 104.99,
+"max_selling_price": 128.99,
+"language": "en"
+}
+},
+"add": {
+"doc": {
+"id": 100050,
+"title": "AC Racing Full Engine Skid Plate",
+"image_url": "/images/items/160/ACG/ACG0006/X001-Y014.jpg",
+"description": "<p>Get off the beaten path without getting your ATV beaten up by installing the AC Racing Full Engine Skid Plate. AC Racing uses thick aluminum construction that will take the impact from anything in your path. The bolt locations on this full engine skid plate are recessed to protected them from breaking. The sides of the skid plate wrap around the frame to give additional protection to your ATV. AC Racing makes maintenance easy with drain hole access.</p>
+<ul>
+<li>1/8-inch thick and made with lightweight aluminum.</li>
+<li>Wraps around frame rails.</li>
+<li>Maintains drain hole access.</li>
+</ul>",
+"mmyexists": "Y",
+"style": "ACG0006",
+"min_retail_price": 132.99,
+"max_retail_price": 132.99,
+"min_selling_price": 119.99,
+"max_selling_price": 119.99,
+"language": "en"
+}
+},
+"add": {
+"doc": {
+"id": 100053,
+"title": "AC Racing ATV Grab Bar",
+"image_url": "/images/items/160/ACG/ACG0009/X001.jpg",
+"description": "<p>The AC Racing Grab Bar might only look like a replacement but, just like any AC Racing product, this is an upgrade. AC Racing built the Grab Bar out of 6061 aluminum with heliarc welding for a durable lightweight grab bar that will withstand the demands of ATV racing. The design of the Grab Bar allows for the use of the stock taillight on most models, and the use of the included number plate. AC Racing keeps it legal when taking your ATV to the dunes with the installed flag mount. All the necessary hardware is included to easily install this grab bar to your ATV.</p>
+<ul>
+<li>An affordable, beneficial upgrade, and or replacement from O.E.M. grab bars.</li>
+<li>Made out of strong, lightweight aluminum.</li>
+<li>All grab bars include a mounting plate for a whip, unique hardware and brackets to install the included 7&#34; x 10&#34; white number plate.</li>
+<li>Made in the U.S.A.</li>
+</ul>",
+"mmyexists": "Y",
+"style": "ACG0009",
+"min_retail_price": 78.99,
+"max_retail_price": 97.99,
+"min_selling_price": 71.99,
+"max_selling_price": 88.99,
+"language": "en"
+}
+}
+}
+
