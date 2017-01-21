@@ -1,3 +1,6 @@
+<!-- These get added to the Turkey SOLR Schema -->
+
+<!-- This is adding multiple documents manually with XML -->
 <add>
     <doc>
         <field name="id">1</field>
@@ -22,3 +25,36 @@
 
     </doc>
 </add>
+
+        <!-- This is adding multiple documents manually with JSON -->
+        {
+        "commit": {},
+        "add": {
+        "doc": {
+        "id": 4,
+        "name": "Jasper",
+        "breed": "Pookat",
+        "language": "en",
+        "content": "Mr. Pookat--you dirty pookiepine"
+        }
+        },
+        "add": {
+        "doc": {
+        "id": 5,
+        "name": "Dakota",
+        "breed": "Panther",
+        "language": "en",
+        "content": "Big snooted panther.  Barfkota"
+        }
+        },
+        "add": {
+        "doc": {
+        "id": 6,
+        "name": "Tuxedo Burrito",
+        "breed": "Nidhog",
+        "language": "en",
+        "content": "Tuxedo Burrito.  Food Kitty"
+        }
+        }
+        }
+
