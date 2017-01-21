@@ -204,7 +204,7 @@
     <field name="title" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
     <field name="image_url" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
     <field name="content" type="text_general" multiValued="false" indexed="true" stored="true"/>
-    <field name="description" type="text_general" multiValued="false" indexed="true" stored="true"/>
+    <!--<field name="description" type="text_general" multiValued="false" indexed="true" stored="true"/>-->
     <field name="style" type="string" multiValued="false" indexed="true" required="true" stored="false"/>
 
     <field name="mmyexists" type="string" multiValued="false" indexed="false" required="true" stored="false"/>
@@ -217,6 +217,6 @@
     <field name="language" type="string" indexed="true" stored="true"/>
     <field name="content_type" type="string" indexed="true" stored="true"/>
 
-    <copyField source="description" dest="content"/>
+    <!--<copyField source="description" dest="content"/>-->
 
 </schema>
