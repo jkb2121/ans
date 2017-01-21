@@ -19,9 +19,9 @@ solr_xmx: "512M"
 solr_timezone: "UTC"
 
 solr_cores:
-  - collection1
+  - productcore
   - turkey
-  - chicken
+
 
 solr_config_file: /etc/default/solr.in.sh
 
