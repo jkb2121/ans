@@ -3,7 +3,6 @@
 Todo Tasks in the Roles:
 
 * update-alternatives --config java  (and pick Java8)
-* Bashrc seems to continuously require to be changed.
 
 
 http://solr.kr47.net:8983/solr/admin/cores

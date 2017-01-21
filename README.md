@@ -31,11 +31,14 @@ Next Steps:
 * ~~Maybe customize nginx a little?~~
 * Do a few tweaks and updates on stuff that I like on
 my linux servers just to explore some of the options
+  * Bash for solr user?
 * What's the difference between a role and a play?
-* Install SOLR and Java from Ansible-galaxy.
+* ~~Install SOLR and Java from Ansible-galaxy.~~
 * Profit.
 * NTP and Pacific Time Zone
-* Organize the directories per the Ansible best practices
+* ~~Organize the directories per the Ansible best practices~~
+* Load and start a DurkaDurka service?
+* Nuke the whole thing and build it from zero! :)
 
 
 ----
