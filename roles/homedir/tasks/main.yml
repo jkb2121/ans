@@ -5,21 +5,22 @@
   set_fact: remote_file_path=/home/mitnick/.bashrc
 
 - name: Create Mitnick's .bashrc file
-  file: path="{{ remote_file_path }}" state=file owner=mitnick group=mitnick
+  file: path="{{ remote_file_path }}" state=touch owner=mitnick group=mitnick
+  when: remote_file_path.stat.exists is defined and not remote_file_path.stat.exists
 
-# Check the remote file...
-- stat: path="{{ remote_file_path }}"
+- name: Check the remote .bashrc file exists
+  stat: path="{{ remote_file_path }}"
   register: file_path
 
-# Write my psg command in there...
-#- set_fact: file_content="alias psg='ps ax|grep'"
+- name: Write my psg command into a variable
+  set_fact: file_content="alias psg='ps ax|grep --color=auto'"
 
-# If file exists, copy the content into the remote file.
-#- copy: content="{{ file_content }}" dest="{{ remote_file_path }}"
-#  when: file_path.stat.exists == true
+- name: Copy the psg command from the variable into the .bashrc file.
+  copy: content="{{ file_content }}" dest="{{ remote_file_path }}"
+  when: file_path.stat.exists == true
 
-- name: Add the psg command using lineinfile.
-  lineinfile:
-    dest: /home/mitnick/.bashrc
-    line: "alias psg='ps ax|grep --color=auto'"
+#- name: Add the psg command using lineinfile.
+#  lineinfile:
+#    dest: /home/mitnick/.bashrc
+#    line: "alias psg='ps ax|grep --color=auto'"
 

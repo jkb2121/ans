@@ -1,6 +1,8 @@
 # /etc/ansible/hosts file:
 
 [servers]
-solr.kr47.net
+#solr.kr47.net
+meta-wordpress
 
-
+[servers:vars]
+ansible_python_interpreter=/usr/bin/python3
