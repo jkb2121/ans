@@ -11,8 +11,15 @@ Meanwhile, a few notes about where I started:
 * I'm using Chunkhost (https://chunkhost.com/r/46352)
 * I've created the Chunkhost chunk
 * My Ansible user is "mitnick"
+```
+# useradd -s /bin/bash -d /home/mitnick mitnick
+# mkdir /home/mitnick
+# chown mitnick.mitnick /home/mitnick
+# mkdir /home/mitnick/.ssh
+# chown mitnick.mitnick /home/mitnick/.ssh
+```
 * I've remoted in to my host as root, added mitnick username/password
-changed shell to /bin/bash, created ~/.ssh, and then copied my ssh key to his authorized_keys
+changed shell to /bin/bash, created ~/.ssh, and then copied my ssh key (jkb@chinook) to his authorized_keys
 * I've added mitnick to the /etc/sudoers
   * mitnick	ALL=NOPASSWD: ALL  # for general ansible goodness
   * mitnick	ALL=(solr) NOPASSWD: ALL  # for executing the geerlingguy.solr
