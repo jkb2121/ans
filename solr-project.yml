@@ -1,0 +1,10 @@
+---
+- hosts: solr.kr47.net
+  roles:
+    - nginx
+    - homedir
+    - system
+    - geerlingguy.java
+    - geerlingguy.solr
+    - solrdata
+

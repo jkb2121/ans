@@ -1,0 +1,18 @@
+---
+- hosts: meta-wordpress
+  remote_user: mitnick
+  pre_tasks:
+     #- name: Pre Task 1
+     #  shell: echo 'I":" Beginning to install meta-wordpress...'
+  roles:
+    - homedir
+    - system
+    - role: geerlingguy.mysql
+      become: yes
+    - role: geerlingguy.apache
+    - role: geerlingguy.php
+    - role: geerlingguy.php-mysql
+  post_tasks:
+     #- name: Post Task 1
+     #  shell: echo 'I":" Beginning to install  meta-wordpress...'
+
