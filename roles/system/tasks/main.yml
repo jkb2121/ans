@@ -5,25 +5,3 @@
     repo: deb http://ftp.de.debian.org/debian jessie-backports main
     state: present
 
-# https://github.com/geerlingguy/ansible-role-mysql/issues/42
-- name: Install Python package manager on Ubuntu 16.04
-  apt: name=python3-pip state=present
-  when: ansible_lsb.major_release|int >= 16
-
-- name: Install packages required for ansible mysql modules on Ubuntu 16.04
-  apt: name={{ item }} state=present
-  with_items:
-    - python3-dev
-    - libmysqlclient-dev
-  when: ansible_lsb.major_release|int >= 16
-
-- name: Install the Python package required for ansible MySQL modules on Ubuntu 16.04
-  pip: name=mysqlclient
-  when: ansible_lsb.major_release|int >= 16
-
-# tasks file for mysql
-#- name: Install the Python MySQLB module
-#  pip: name=MySQL-python
-
-#  - name: Create the flask database
-#    mysql_db: name=flask_db state=present

@@ -1,0 +1,6 @@
+---
+- name: Add PHPInfo.php file
+  copy: src=phpinfo.php dest="/var/www/html/phpinfo.php" owner=www-data group=www-data
+
+- name: Set PHPInfo.php Permissions
+  file: dest="/var/www/html/phpinfo.php" mode=775 state=file owner=www-data group=www-data
