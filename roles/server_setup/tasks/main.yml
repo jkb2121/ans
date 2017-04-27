@@ -21,3 +21,14 @@
 
 #  - name: Create the flask database
 #    mysql_db: name=flask_db state=present
+
+
+- name: Install Requirements for Wordpress
+  apt: name={{ item }} state=present
+  become: yes
+  with_items:
+    - php-mysql
+    - php-mcrypt
+    - python-mysqldb
+    - php-gd
+    - php-ssh2

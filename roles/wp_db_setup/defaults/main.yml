@@ -1,0 +1,9 @@
+# TODO: Come back and fix that password, use ansible-vault
+# ...and idiot, I'm storing it in github, too?
+# ...can you imagine if Keegan saw this?
+# ...seriously though, once I get this to work, I'll come back and fix it. :)
+
+---
+wp_mysql_db: wordpress
+wp_mysql_user: wordpress
+wp_mysql_password: 123wordpress321
