@@ -18,6 +18,7 @@
     - role: geerlingguy.php-mysql
     - role: wp_db_setup
     - role: wordpress
+    - role: wp_ftp_user
   post_tasks:
      #- name: Post Task 1
      #  shell: echo 'I":" Beginning to install  meta-wordpress...'

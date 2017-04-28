@@ -1,0 +1,29 @@
+---
+#  vars:
+#    # created with:
+#    # python -c 'import crypt; print crypt.crypt("This is my Password", "$1$SomeSalt$")'
+#    password: $1$MRM346e0$zOKl9L60Tvw8p3eD867lf/
+- name: Create WP FTP User
+  user: name=redacted password=redacted/ state=present groups=www-data
+# Need to Hook this up with Ansible Vault
+
+- name: Files and Permissions to www-data Group
+  file: path=/var/www/wordpress group=www-data recurse=yes mode="g+rw"
+
+- name: Update WordPress config file with FTP info
+  lineinfile:
+    dest=/var/www/wordpress/wp-config.php
+    line="{{ item.line }}"
+    state=present
+    insertbefore='That\'s all, stop editing! Happy blogging'
+  with_items:
+    - {'line': "define( 'FTP_USER', 'redacted' );"}
+    - {'line': "define( 'FTP_PASS', 'redacted' );"}
+    - {'line': "define( 'FTP_HOST', 'redacted:22' );"}
+    - {'line': "define( 'FS_METHOD', 'ssh2' );"}
+    - {'line': "define('FTP_BASE', '/var/www/wordpress/');"}
+    - {'line': "define('FTP_PLUGIN_DIR', '/var/www/wordpress/wp-content/plugins/');"}
+    - {'line': "define('FTP_CONTENT_DIR', '/var/www/wordpress/wp-content/');"}
+
+  become: yes
+
