@@ -32,3 +32,13 @@
     - {'regexp': "define\\('DB_USER', '(.)+'\\);", 'line': "define('DB_USER', '{{wp_mysql_user}}');"}
     - {'regexp': "define\\('DB_PASSWORD', '(.)+'\\);", 'line': "define('DB_PASSWORD', '{{wp_mysql_password}}');"}
   become: yes
+
+- name: Download SSH-FTP-Updater Support for Wordpress
+  get_url:
+    url=https://downloads.wordpress.org/plugin/ssh-sftp-updater-support.zip
+    dest=/tmp/ssh-sftp-updater-support.zip
+    validate_certs=no
+
+- name: Extract The SSH-FTP-Updater for Wordpress
+  unarchive: src=/tmp/ssh-sftp-updater-support.zip dest=/var/www/wordpress/wp-content/plugins copy=no owner=nobody group=www-data
+  become: yes
