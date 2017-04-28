@@ -32,3 +32,4 @@
     - python-mysqldb
     - php-gd
     - php-ssh2
+    - unzip
