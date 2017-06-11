@@ -1,4 +1,25 @@
 ---
-#- name: Debug Message for DBName
-- debug:
-    msg: Database Name (dbname) {{ dbname }}
+- name: Debug Message for db_dbname
+  debug:
+    msg: Database Name (db_dbname) {{ db_dbname }}
+
+- name: Debug Message for db_username
+  debug:
+    msg: Database Username (db_username) {{ db_username }}
+
+- name: Debug Message for db_password
+  debug:
+    msg: Database Password (db_password) {{ db_password }}
+
+- name: Test of wp_mysql_db
+  debug:
+    msg: MySQL DB (wp_mysql_db) {{ wp_mysql_db }}
+
+- name: Test of wp_mysql_user
+  debug:
+    msg: MySQL DB (wp_mysql_user) {{ wp_mysql_user }}
+
+- name: Test of wp_mysql_password
+  debug:
+    msg: MySQL DB (wp_mysql_password) {{ wp_mysql_password }}
+

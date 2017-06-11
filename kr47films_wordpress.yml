@@ -3,6 +3,9 @@
 ---
 - hosts: kr47host
   vars:
-    - dbname:  kr47_wordpress
+    - db_dbname:  kr47_wordpress
+    - db_username:  krwordpress
+    - db_password:  wordpress47
   roles:
+    - role: wp_db_setup
     - role: echo_variables
