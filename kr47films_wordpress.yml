@@ -1,11 +1,17 @@
 # Set up Wordpress for KR47
 #
+# TODO: Come back and fix that password, use ansible-vault
+# ...and idiot, I'm storing it in github, too?
+# ...can you imagine if Keegan saw this?
+# ...seriously though, once I get this to work, I'll come back and fix it. :)
+
 ---
 - hosts: kr47host
   vars:
     - db_dbname:  kr47_wordpress
     - db_username:  krwordpress
     - db_password:  wordpress47
+  remote_user: mitnick
   roles:
     - role: wp_db_setup
     - role: echo_variables
