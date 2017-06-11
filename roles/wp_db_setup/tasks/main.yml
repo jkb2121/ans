@@ -1,9 +1,19 @@
 ---
-#- name: Create mysql database
-#  mysql_db: name={{ wp_mysql_db }} state=present
-#
-#- name: Create mysql user
-#  mysql_user:
-#    name={{ wp_mysql_user }}
-#    password={{ wp_mysql_password }}
-#    priv=*.*:ALL
+- name: Create mysql database
+  mysql_db:
+    name={{ wp_mysql_db }}
+    state=present
+    {% if server_mysql_username is defined %}
+      login_user={{ server_mysql_username }}
+      login_password={{ server_mysql_password }}
+    {% endif %}
+
+- name: Create mysql user
+  mysql_user:
+    name={{ wp_mysql_user }}
+    password={{ wp_mysql_password }}
+    priv=*.*:ALL
+    {% if server_mysql_username is defined %}
+      login_user={{ server_mysql_username }}
+      login_password={{ server_mysql_password }}
+    {% endif %}

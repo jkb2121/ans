@@ -11,7 +11,10 @@
     - db_dbname:  kr47_wordpress
     - db_username:  krwordpress
     - db_password:  wordpress47
+    - server_mysql_username: root
+    - server_mysql_password: "!@!mysql"
   remote_user: mitnick
   roles:
+    - role: server_setup
     - role: wp_db_setup
     - role: echo_variables

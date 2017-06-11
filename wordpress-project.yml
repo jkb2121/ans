@@ -4,6 +4,8 @@
     - db_dbname:  wordpress
     - db_username:  wordpress
     - db_password:  123wordpress321
+    - server_mysql_username: root
+    - server_mysql_password: root
   remote_user: mitnick
   pre_tasks:
      #- name: Pre Task 1

@@ -15,7 +15,7 @@
   pip: name=mysqlclient
   when: ansible_lsb.major_release|int >= 16
 
-# tasks file for mysql
+## tasks file for mysql
 #- name: Install the Python MySQLB module
 #  pip: name=MySQL-python
 
@@ -27,9 +27,15 @@
   apt: name={{ item }} state=present
   become: yes
   with_items:
-    - php-mysql
-    - php-mcrypt
+    - python3-pip
+    - python3-dev
+    - libmysqlclient-dev
+#    - php-mysql
+#    - php-mcrypt
     - python-mysqldb
-    - php-gd
-    - php-ssh2
+#    - php-gd
+#    - php-ssh2
     - unzip
+
+- name: Install the Python package required for ansible MySQL modules
+  pip: name=mysqlclient
