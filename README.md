@@ -17,6 +17,7 @@ Meanwhile, a few notes about where I started:
 # chown mitnick.mitnick /home/mitnick
 # mkdir /home/mitnick/.ssh
 # chown mitnick.mitnick /home/mitnick/.ssh
+# passwd mitnick  (and then assign the password)
 ```
 * I've remoted in to my host as root, added mitnick username/password
 changed shell to /bin/bash, created ~/.ssh, and then copied my ssh key (jkb@chinook) to his authorized_keys
@@ -30,6 +31,11 @@ I should be able to use ansible and ansible-playbooks
 to set up whatever else I need without using to manually
 do it.
 
+---
+Example of executing playbook:
+```
+$ ansible-playbook -u mitnick -s playbook.yml
+```
 ----
 
 Next Steps:

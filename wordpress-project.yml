@@ -5,20 +5,20 @@
      #- name: Pre Task 1
      #  shell: echo 'I":" Beginning to install meta-wordpress...'
   roles:
-    - homedir
-    - system
-    - server_setup
-    - role: geerlingguy.mysql
-      become: yes
-    - role: geerlingguy.apache
-    - role: geerlingguy.php
-      php_packages:
-        - libapache2-mod-php7.0
-    - role: php_phpinfo
-    - role: geerlingguy.php-mysql
-    - role: wp_db_setup
-    - role: wordpress
-    - role: wp_ftp_user
+#    - homedir
+#    - system
+#    - server_setup
+#    - role: geerlingguy.mysql
+#      become: yes
+#    - role: geerlingguy.apache
+#    - role: geerlingguy.php
+#      php_packages:
+#        - libapache2-mod-php7.0
+#    - role: php_phpinfo
+#    - role: geerlingguy.php-mysql
+#    - role: wp_db_setup
+#    - role: wordpress
+#    - role: wp_ftp_user
   post_tasks:
      #- name: Post Task 1
      #  shell: echo 'I":" Beginning to install  meta-wordpress...'

@@ -1,0 +1,8 @@
+# Set up Wordpress for KR47
+#
+---
+- hosts: kr47host
+  vars:
+    - dbname:  kr47_wordpress
+  roles:
+    - role: echo_variables

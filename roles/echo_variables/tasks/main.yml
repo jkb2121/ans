@@ -1,0 +1,4 @@
+---
+#- name: Debug Message for DBName
+- debug:
+    msg: Database Name (dbname) {{ dbname }}
