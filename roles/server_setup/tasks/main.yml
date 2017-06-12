@@ -30,11 +30,15 @@
     - python3-pip
     - python3-dev
     - libmysqlclient-dev
+    - python-mysqldb
 #    - php-mysql
 #    - php-mcrypt
-    - python-mysqldb
 #    - php-gd
 #    - php-ssh2
+    - php5-ssh2
+    - php5-mysql
+    - php5-mcrypt
+    - php5-gd
     - unzip
 
 - name: Install the Python package required for ansible MySQL modules

@@ -6,6 +6,9 @@
     - db_password:  123wordpress321
     - server_mysql_username: root
     - server_mysql_password: root
+    - wordpress_instance_name: wordpress
+    - wordpress_install_path: "/var/www/{{ wordpress_instance_name }}"
+
   remote_user: mitnick
   pre_tasks:
      #- name: Pre Task 1
