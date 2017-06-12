@@ -49,6 +49,14 @@
     line="ServerName {{ wordpress_site_url }}"
   when: found_wordpress_dir.stat.exists == false
 
+- name: Update Apache Config ServerAlias
+  become: yes
+  lineinfile:
+    dest="/etc/apache2/sites-available/{{ wordpress_instance_name }}.conf"
+    regexp="(.)+ServerAlias google.com"
+    line="ServerAlias {{ wordpress_server_alias }}"
+  when: found_wordpress_dir.stat.exists == false
+
 - name: Symlink to Enable and then Restart Apache
   file:
     src: "/etc/apache2/sites-available/{{ wordpress_instance_name }}.conf"
