@@ -4,7 +4,7 @@
 #    # python -c 'import crypt; print crypt.crypt("This is my Password", "$1$SomeSalt$")'
 #    password: $1$MRM346e0$zOKl9L60Tvw8p3eD867lf/
 - name: Create WP FTP User
-  user: name="{{ ftp_user }}" password={{ ftp_crypt }}/ state=present groups=www-data
+  user: name="{{ ftp_user }}" password={{ ftp_crypt }} state=present groups=www-data
 # Need to Hook this up with Ansible Vault
 
 - name: Files and Permissions to www-data Group
