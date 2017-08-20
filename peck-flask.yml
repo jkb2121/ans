@@ -1,0 +1,4 @@
+---
+- hosts: peck.meta-commerce.com
+
+  remote_user: mitnick

@@ -12,9 +12,20 @@
     - db_username:  krwordpress
     - db_password:  wordpress47
     - server_mysql_username: root
-    - server_mysql_password: "!@!mysql"
+    - server_mysql_password: ""  # get this actual info from KeePass
+    - wordpress_instance_name: "kr47films"
+    - wordpress_install_path: "/var/www/{{ wordpress_instance_name }}"
+    - wordpress_site_url: "kr47films.com"
+    - wordpress_server_alias: "www.kr47films.com"
+    - ftp_user: ""   # get this actual info from KeePass
+    - ftp_pass: ""  # get this actual info from KeePass
+    - ftp_crypt: ""  # get this actual info from KeePass
+    # python -c 'import crypt; print crypt.crypt()' # get this actual info from KeePass
+
   remote_user: mitnick
   roles:
     - role: server_setup
     - role: wp_db_setup
+    - role: wordpress
+    - role: wp_ftp_user
     - role: echo_variables

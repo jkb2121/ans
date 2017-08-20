@@ -1,0 +1,8 @@
+---
+- include: vault/vault-echo.yml
+
+  hosts: kr47host
+  remote_user: mitnick
+  roles:
+    - role: echo_variables
+

@@ -3,6 +3,8 @@
 [servers]
 #solr.kr47.net
 meta-wordpress
+kr47host
+peck.meta-commerce.com
 
 [servers:vars]
 ansible_python_interpreter=/usr/bin/python3
