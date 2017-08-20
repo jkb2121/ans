@@ -26,7 +26,7 @@ changed shell to /bin/bash, created ~/.ssh, and then copied my ssh key (jkb@chin
   * mitnick	ALL=(solr) NOPASSWD: ALL  # for executing the geerlingguy.solr
 * Replaced Debian's default ansible 1.7 to ansible 2.2 using pip install.  Also, make sure that Python pip is installed.
 * Add the new FQDN (or hostfilename/IP) to /etc/ansible/hosts
-* Added new hosts's Root Password to KeePass
+* Added new host's Root Password to KeePassX
 * Disabled Root Login (e.g. https://chunkhost.com/help/security)
 
 So with those changes above (I'll list any more that I find)
@@ -35,14 +35,27 @@ to set up whatever else I need without using to manually
 do it.
 
 ---
-Example of executing playbook:
+Examples of executing Ansible:
 ```
+# Execute an Ansible Playbook:
 $ ansible-playbook -u mitnick -s playbook.yml
 ```
+
+```
+# Execute an ansible module individually (e.g. ping)
+$ ansible hostnameorgroup -u mitnick -m ping
+```
+
+```
+# Execute an ad-hoc command (in this case across all servers)
+$ ansible servers -u mitnick -a "uname -a"
+```
+
 ----
 
 Next Steps:
 
+* Get passwords into Ansible Vault and retrofit playbooks.
 * ~~Do an nginx tutorial to see how ansible works~~
 * ~~Maybe customize nginx a little?~~
 * Do a few tweaks and updates on stuff that I like on
