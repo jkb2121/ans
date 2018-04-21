@@ -14,7 +14,7 @@
      #- name: Pre Task 1
      #  shell: echo 'I":" Beginning to install meta-wordpress...'
   roles:
-#    - homedir
+#    - mitnick
 #    - system
 #    - server_setup
 #    - role: geerlingguy.mysql

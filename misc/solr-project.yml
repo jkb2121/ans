@@ -2,7 +2,7 @@
 - hosts: solr.kr47.net
   roles:
     - nginx
-    - homedir
+    - mitnick
     - system
     - geerlingguy.java
     - geerlingguy.solr
