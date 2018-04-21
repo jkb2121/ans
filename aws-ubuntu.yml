@@ -8,10 +8,13 @@
 
 ---
 - hosts: awsdrone
+
   vars:
-    - hostname:  awsdrone
+  # - include: vault/vault-jkb.yml
+  - hostname:  awsdrone
 
   remote_user: mitnick
   roles:
     - role: apt_upgrades
     - role: mitnick
+    - role: jkb_home

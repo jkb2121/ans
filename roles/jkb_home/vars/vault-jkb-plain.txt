@@ -1,0 +1,14 @@
+---
+jkb_pwd_sha512:
+  - $6$W8KtK0v5PAZ$HKtnxXDagE/9BQ.pN6YZi/v.9sI.01UdmdfyoFMNFDB1ogLgF3xleksZ/3KSmcKusgubXgGR189.OAHEwHwUn.
+
+jkb_public_key: |
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAl5yxv7Vy7HrgkbuNc7p2wfV4etyz+GCSZcbG8IUL8WgvRiIviHf2EvvhuKaGQ6dc3gwsNxpsbsS/okzGZ5GnCxWv+YCk1xCtZCrrwbbphr6+WQd3UJu8JwkI4qt2Y4d/hqUuTrUkNfFgKPvLNsFgt/gB4IWGixVMPatm2p00XdkJ//kup7MBY5+j2F1qyho9hFf3EkbqSTxyNMhVtiLO7JX1r5dDbtm2OxZdG61etuaMTzCp0pjdJ6VqM14hBt+D3NDO6etXQdT+rvzIZBh6ILkQ9Gxr9ecXOpLw6pbSM18T8OTEvlg2shmVKjFYqF9BJJxQ5p/MCJllATNK/meR jkb@chinook
+
+
+
+
+# mkpasswd --method=sha-512
+!@!awsdroney2018
+
+$6$W8KtK0v5PAZ$HKtnxXDagE/9BQ.pN6YZi/v.9sI.01UdmdfyoFMNFDB1ogLgF3xleksZ/3KSmcKusgubXgGR189.OAHEwHwUn.

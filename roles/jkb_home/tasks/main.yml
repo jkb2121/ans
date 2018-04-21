@@ -1,0 +1,46 @@
+
+---
+- include_vars: vault-jkb.yml
+
+- name: Create jkb user with password
+  user:
+    name: jkb
+    password: "{{ jkb_pwd_sha512 }}"
+    groups: # Empty by default, here we give it some groups
+    # - sudo
+    state: present
+    shell: /bin/bash       # Defaults to /bin/bash
+    system: no             # Defaults to no
+    createhome: yes        # Defaults to yes
+    home: /home/jkb  # Defaults to /home/<username>
+
+- name: Set jkb's .bash_profile Path
+  set_fact: remote_file_path=/home/jkb/.bash_profile
+
+- name: Create jkb's .bash_profile file
+  copy:
+    content: ""
+    dest: "{{ remote_file_path }}"
+    force: no
+    group: jkb
+    owner: jkb
+    mode: 0644
+
+- name: Check the remote .bash_profile file exists
+  stat: path="{{ remote_file_path }}"
+  register: file_path
+
+# I like to use the alias "psg" (ps ax |grep) to grep processes for something
+# just out of habit.  Not sure if this should be a play or a role or something else?
+- name: Write my psg command into a variable
+  set_fact: file_content='alias psg="ps ax|grep --color=auto"\n'
+
+- name: Copy the psg command from the variable into the .bashrc file.
+  copy: content="{{ file_content }}" dest="{{ remote_file_path }}"
+  when: file_path.stat.exists == true
+
+- name: Set authorized key took from file
+  authorized_key:
+    user: jkb
+    state: present
+    key: "{{ lookup('file', '/home/jkb/.ssh/id_rsa.pub') }}"
