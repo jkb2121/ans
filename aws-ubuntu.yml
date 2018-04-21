@@ -1,0 +1,17 @@
+
+
+# 1. Create the AWS Ubuntu EC2 Host
+# 2. Use your AWS Creation Key (mykeypair.pem)
+# 3. Add it to the SSH AWS Security Group
+# 4. Add the Public IPV4 Address to /etc/hosts locally (i called this one awsdrone)
+# 5. Connect to it: ssh -i ~/.ssh/mykeypair.pem ubuntu@awsdrone
+
+---
+- hosts: awsdrone
+  vars:
+    - hostname:  awsdrone
+
+  remote_user: mitnick
+  roles:
+    - role: apt_upgrades
+    - role: homedir

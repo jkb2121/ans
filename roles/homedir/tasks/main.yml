@@ -2,18 +2,24 @@
 # just out of habit.  Not sure if this should be a play or a role or something else?
 ---
 - name: Set Mitnick's .bashrc Path
-  set_fact: remote_file_path=/home/mitnick/.bashrc
+  set_fact: remote_file_path=/home/mitnick/.bash_profile
 
 - name: Create Mitnick's .bashrc file
-  file: path="{{ remote_file_path }}" state=touch owner=mitnick group=mitnick
-  when: remote_file_path.stat.exists is defined and not remote_file_path.stat.exists
+  copy:
+    content: ""
+    dest: "{{ remote_file_path }}"
+    force: no
+    group: mitnick
+    owner: mitnick
+    mode: 0644
+  # when: remote_file_path.stat.exists is defined and not remote_file_path.stat.exists
 
 - name: Check the remote .bashrc file exists
   stat: path="{{ remote_file_path }}"
   register: file_path
 
 - name: Write my psg command into a variable
-  set_fact: file_content="alias psg='ps ax|grep --color=auto'"
+  set_fact: file_content='alias psg="ps ax|grep --color=auto"\n'
 
 - name: Copy the psg command from the variable into the .bashrc file.
   copy: content="{{ file_content }}" dest="{{ remote_file_path }}"
