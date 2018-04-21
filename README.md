@@ -51,6 +51,11 @@ $ ansible hostnameorgroup -u mitnick -m ping
 $ ansible servers -u mitnick -a "uname -a"
 ```
 
+```
+# Execute playbook but use the password to encrypt/decrypt the vault
+$ ansible-playbook -u mitnick -s aws-ubuntu.yml --vault-password-file vault/vault-jkb-pw.txt
+
+```
 ----
 
 Next Steps:
